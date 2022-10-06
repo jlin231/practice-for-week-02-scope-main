@@ -20,6 +20,16 @@ multiplyByFive(5); // returns 25
 
 // Your code here
 
+function dynamicMultiply(multiplier) {
+
+  function multiply(valueToBeMultiplied) {
+    return multiplier * valueToBeMultiplied;
+  }
+  return multiply;
+
+}
+
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
