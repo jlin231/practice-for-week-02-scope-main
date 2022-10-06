@@ -36,11 +36,14 @@ function countDownTimer(n) {
     if (count > 0) {
       console.log(count);
       count -= 1;
+      if (count === 0) {
+        return "Happy New Year!";
+      }
       return HNY;
     }
-    else {
-      return "Happy New Year!";
-    }
+  }
+  if (count === 0) {
+    return "Happy New Year!";
   }
   return HNY;
 }
