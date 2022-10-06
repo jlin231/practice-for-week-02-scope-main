@@ -30,11 +30,8 @@ Example 4:
 
 function countDownTimer(n) {
   let count = n;
-  console.log(n + " is N")
   function HNY() {
-    console.log(count + " is count");
     if (count > 0) {
-      console.log(count);
       count -= 1;
       if (count === 0) {
         return "Happy New Year!";
