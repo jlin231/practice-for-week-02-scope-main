@@ -18,11 +18,22 @@ funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 
 ***********************************************************************/
 
-// Your code here
+function funcTimer(time, func) {
+  console.log(time)
+  global.setTimeout(func, time)
+  return
+}
 
+function partyFunc() {
+  console.log("Party time!")
+}
+console.log(funcTimer(5000, partyFunc))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
+  sandwich("spinach") // => "One sandwich with tomato and spinach"
+  sandwich("jelly") // => "One sandwich with tomato and spinach and jelly"
+  sandwich("bread") // => "One sandwich with tomato and spinach and jelly and bread"
   module.exports = funcTimer;
 } catch (e) {
   // catch the ref err
