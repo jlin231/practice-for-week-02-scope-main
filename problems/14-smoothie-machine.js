@@ -23,11 +23,40 @@ console.log(smoothie2("pineapple"));
 ***********************************************************************/
 
 // Your code here
+function smoothieMachine(...strings) {
+  //add strings array into an actual string
+  let sentence = "";
+  if (strings.length > 0) {
+    sentence = "I'm having a smoothie with " + strings[0];
+  }
+  else {
+    sentence = "I'm having a smoothie with ";
+  }
+  for (let i = 0; i < strings.length; i++) {
+    sentence += " and " + strings[i];
+  }
+  console.log(sentence)
+  function smoothie(...moreStrings) {
+    if (sentence === "I'm having a smoothie with ") {
+      sentence += moreStrings[0];
+      for (let i = 1; i < moreStrings.length; i++) {
+        sentence += " and " + moreStrings[i];
+      }
+    }
+    else {
+      for (let i = 1; i < moreStrings.length; i++) {
+        sentence += " and " + moreStrings[i];
+      }
+      return sentence;
 
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-try {
-  module.exports = smoothieMachine;
-} catch (e) {
-  // catch the ref err
-  module.exports = null;
-}
+    }
+    return smoothie
+  }
+
+  /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
+  try {
+    module.exports = smoothieMachine;
+  } catch (e) {
+    // catch the ref err
+    module.exports = null;
+  }

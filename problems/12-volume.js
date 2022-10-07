@@ -15,6 +15,33 @@ function returned by recVolume should continue to return the original volume.
 
 // Your code here
 
+function recVolume(height) {
+  let h = height;
+  let length = 0;
+  let width = 0;
+
+  function getVolume(value) {
+    if (length === 0) {
+      length = value;
+      console.log("length is " + length)
+      return getVolume
+    }
+    else {
+      width = value;
+      console.log(width)
+      console.log(h);
+      return length * h * width;
+    }
+  }
+  return getVolume
+}
+
+let a = recVolume(4);
+console.log(a(3));
+console.log(a(2));
+console.log('test')
+
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
